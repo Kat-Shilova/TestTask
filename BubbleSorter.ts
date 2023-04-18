@@ -15,15 +15,17 @@ class BubbleSorter implements Sorter {
 
         this.sort = () => {
 
-            for (let i = 0; i <= arr.length - 1; i++) {
-                if (arr[i] > arr[i + 1]) {
-                    const arrI = arr[i];
+            for (let j = arr.length - 1; j > 0; j--) {
+                for (let i = 0; i <= arr.length - 1; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        const arrI = arr[i];
 
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = arrI;
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = arrI;
+                    }
+
+                    this.result = arr;
                 }
-
-                this.result = arr;
             }
 
             // как вариант
